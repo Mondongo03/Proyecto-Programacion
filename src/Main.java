@@ -1,7 +1,10 @@
+import java.time.LocalDate;
+import java.time.chrono.ChronoPeriod;
+
 //Definimos la clase Main que arrancaremos
 public class Main {
     public static void main(String[] args) {
-
+        /*
         //Instanciamos todas las instancias necesarias para poder usar los métodos de las clases
         Menu menu = new Menu();
         Lectura lectura = new Lectura();
@@ -49,5 +52,10 @@ public class Main {
                 controlador.Load();
             }
         } while (accion != 0);
+
+         */
+        LocalDate dataCaducitat = LocalDate.ofEpochDay(2000-2-3);
+        ChronoPeriod a = ChronoPeriod.between(dataCaducitat, LocalDate.now());
+        System.out.println(a);
     }
 }
